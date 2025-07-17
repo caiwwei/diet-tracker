@@ -14,3 +14,7 @@ function createWindow() {
 }
 
 app.whenReady().then(createWindow);
+
+require('electron-reload')(__dirname, {
+  electron: require(`${__dirname}/node_modules/electron`)
+});

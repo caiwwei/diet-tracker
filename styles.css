@@ -45,7 +45,45 @@ form {
   padding: 1.5rem;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+form label {
+  width: 100%;
+  max-width: 400px;
+  text-align: left;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+form input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 2px solid #f3d9e3;
+  border-radius: 10px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+form button[type="submit"] {
+  margin-top: 1.5rem;
+  padding: 0.7rem 2rem;
+  font-weight: bold;
+  background-color: #cc3366;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+
+  align-self: center;
+}
+
 
 label {
   display: block;
@@ -95,3 +133,10 @@ button[type="submit"]:hover {
 .meal-details strong {
   color: #cc3366;
 }
+
+button,
+.tab-button,
+button[type="submit"] {
+  font-family: 'TikTok Sans', sans-serif !important;
+}
+
