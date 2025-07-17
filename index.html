@@ -3,105 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Diet Tracker</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #fdfdfd;
-      color: #333;
-      text-align: center;
-      padding: 2rem;
-    }
 
-    h1 {
-      font-size: 2.5rem;
-      color: #cc3366;
-    }
-
-    .tabs {
-      margin: 2rem 0;
-    }
-
-    .tab-button {
-      padding: 0.7rem 1.5rem;
-      margin: 0 0.5rem;
-      background: #f3d9e3;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .tab-button.active {
-      background: #cc3366;
-      color: white;
-    }
-
-    .tab-content {
-      display: none;
-      max-width: 500px;
-      margin: 0 auto;
-    }
-
-    .tab-content.active {
-      display: block;
-    }
-
-    form {
-      background: #fff;
-      padding: 1.5rem;
-      border-radius: 15px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    label {
-      display: block;
-      margin-top: 1rem;
-      font-weight: bold;
-      text-align: left;
-    }
-
-    input {
-      width: 100%;
-      padding: 0.5rem;
-      margin-top: 0.5rem;
-      border: 2px solid #f3d9e3;
-      border-radius: 10px;
-      font-family: inherit;
-    }
-
-    button[type="submit"] {
-      margin-top: 1.5rem;
-      padding: 0.7rem 2rem;
-      background-color: #cc3366;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-
-    button[type="submit"]:hover {
-      background-color: #e35577;
-    }
-
-    .date-list button {
-      background: #f3d9e3;
-      margin: 0.5rem;
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-
-    .meal-details {
-      text-align: left;
-      margin-top: 1rem;
-    }
-
-    .meal-details strong {
-      color: #cc3366;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <h1>Diet Tracker</h1>
@@ -111,7 +15,6 @@
     <button class="tab-button" data-tab="history-tab">Meal History</button>
   </div>
 
-  <!-- Tab 1: Meal Form -->
   <div id="log-tab" class="tab-content active">
     <form id="meal-form">
       <label for="date">Date</label>
@@ -133,7 +36,6 @@
     </form>
   </div>
 
-  <!-- Tab 2: Meal History -->
   <div id="history-tab" class="tab-content">
     <h2>Meal History</h2>
     <div class="date-list" id="date-list"></div>
@@ -179,10 +81,8 @@
     updateDateList();
     showMealDetails(date);
 
-    // Reset form
     mealForm.reset();
 
-    // Set focus back to date field
     dateInput.focus();
   });
 
