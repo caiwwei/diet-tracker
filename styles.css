@@ -8,7 +8,7 @@ body {
 
 h1 {
   font-size: 2.5rem;
-  color: #cc3366;
+  color: #f39d9d;
 }
 
 .tabs {
@@ -18,7 +18,8 @@ h1 {
 .tab-button {
   padding: 0.7rem 1.5rem;
   margin: 0 0.5rem;
-  background: #f3d9e3;
+  background: #f8cece;
+  color: white;
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -26,7 +27,7 @@ h1 {
 }
 
 .tab-button.active {
-  background: #cc3366;
+  background: #f39d9d;
   color: white;
 }
 
@@ -64,7 +65,7 @@ form input {
   max-width: 400px;
   padding: 0.5rem;
   margin-top: 0.5rem;
-  border: 2px solid #f3d9e3;
+  border: 2px solid #ffe4e4;
   border-radius: 10px;
   font-family: inherit;
   box-sizing: border-box;
@@ -74,7 +75,7 @@ form button[type="submit"] {
   margin-top: 1.5rem;
   padding: 0.7rem 2rem;
   font-weight: bold;
-  background-color: #cc3366;
+  background-color: #f39d9d;
   color: white;
   border: none;
   border-radius: 10px;
@@ -96,7 +97,7 @@ input {
   width: 100%;
   padding: 0.5rem;
   margin-top: 0.5rem;
-  border: 2px solid #f3d9e3;
+  border: 2px solid #ffe4e4;
   border-radius: 10px;
   font-family: inherit;
 }
@@ -104,25 +105,42 @@ input {
 button[type="submit"] {
   margin-top: 1.5rem;
   padding: 0.7rem 2rem;
-  background-color: #cc3366;
+  background-color: #f08c8c;
   color: white;
   border: none;
   border-radius: 10px;
   font-size: 1rem;
   cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 button[type="submit"]:hover {
-  background-color: #e35577;
+  background-color: #ef8989;
+}
+
+button[type="submit"]:active {
+  background-color: #e77676;
 }
 
 .date-list button {
-  background: #f3d9e3;
+  background: #f8cece;
+  color: white;
   margin: 0.5rem;
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  font-weight: bold;
+  font-family: 'TikTok Sans', sans-serif;
+  transition: background-color 0.2s ease;
+}
+
+.date-list button:hover {
+  background-color: #f7b9b9;
+}
+
+.date-list button:active {
+  background-color: #f9a3a3;
 }
 
 .meal-details {
@@ -131,7 +149,7 @@ button[type="submit"]:hover {
 }
 
 .meal-details strong {
-  color: #cc3366;
+  color: #f39d9d;
 }
 
 button,
@@ -140,3 +158,8 @@ button[type="submit"] {
   font-family: 'TikTok Sans', sans-serif !important;
 }
 
+input:focus {
+  border-color: #f2a4a4; 
+  outline: none;      
+  box-shadow: 0 0 0 3px rgba(242, 164, 164, 0.3); 
+}
